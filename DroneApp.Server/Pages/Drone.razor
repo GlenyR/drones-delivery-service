@@ -1,0 +1,32 @@
+﻿<div class="row">
+    <p class="col-md-12">
+        <label class="text-dark"><strong>Input / Instruction Sample:</strong></label> <br />
+        Line 1: [Drone #1 Name], [#1 Maximum Weight], [Drone #2 Name], [#2 Maximum Weight], etc. <br />
+        Line 2: [Location #1 Name], [Location #1 Package Weight]  <br />
+        Line 3: [Location #2 Name], [Location #2 Package Weight]  <br />
+        Line 4: [Location #3 Name], [Location #3 Package Weight]  <br />
+        Etc. <br />
+    </p>
+    <div class="form-group col-12">
+        <br />
+        <label class="text-dark"><strong>Input / Instruction Sample:</strong></label> 
+        <br />
+        <textarea class="col-6" style="height:300px;" @bind="Instructions" />
+
+        @if (!string.IsNullOrWhiteSpace(Error))
+        {
+            <p class="text-danger">@Error</p>
+        }
+    </div>
+
+    <div class="form-group col-6">
+        <button class="btn btn-primary" @onclick="ProcessDelivery">Process Deliveries</button>
+    </div>
+
+    <div class="form-group col-12">
+        <br />
+        <label class="text-dark"><strong>Output:</strong></label> 
+        <br />
+        <textarea class="col-6" style="height:300px;" @bind="OutPut" />
+    </div>
+</div>

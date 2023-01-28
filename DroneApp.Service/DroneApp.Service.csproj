@@ -1,0 +1,14 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="Services\" />
+    <None Remove="IServices\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\DrooneApp.Domain\DroneApp.Domain.csproj" />
+  </ItemGroup>
+</Project>
